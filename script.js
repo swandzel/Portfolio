@@ -1,10 +1,3 @@
-// window.addEventListener("scroll", function () {
-//   const navbar = document.querySelector("nav");
-//   const logo = document.querySelector("#logo");
-//   navbar.classList.toggle("sticky", window.scrollY > 700);
-//   logo.classList.toggle("sticky", window.scrollY > 700);
-// });
-
 const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 2200,
 });
@@ -37,9 +30,11 @@ headObserver.observe(home);
 
 const textFade = function (entries) {
   // console.log(entries[0]);
+
   const [entry] = entries;
-  if (!entry.isIntersecting) header.classList.add("opacity");
-  else header.classList.remove("opacity");
+  if (!entry.isIntersecting && window.innerWidth > 1300) {
+    header.classList.add("opacity");
+  } else header.classList.remove("opacity");
 };
 
 const observer = new IntersectionObserver(textFade, {
@@ -49,6 +44,15 @@ const observer = new IntersectionObserver(textFade, {
 });
 
 observer.observe(header);
+
+const burger = document.getElementById("burger");
+const navLinks = document.querySelector(".navbar-links");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// KONIEC AKTUALNEGO KODU
 
 // const header = document.getElementById("header");
 
