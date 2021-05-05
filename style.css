@@ -43,14 +43,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 200px;
+  padding: 40px 150px;
   z-index: 10;
   position: fixed;
 }
 
 nav.sticky {
   position: fixed;
-  padding: 25px 150px;
+  padding: 25px 100px;
   background: #0f121b;
   -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.54);
   box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.1);
@@ -95,15 +95,15 @@ nav.sticky a {
   color: #b2b9c5;
 }
 
-/* #burger {
+#burger {
   display: none;
   font-size: 1.5rem;
   color: #f9f8eb;
   cursor: pointer;
   position: absolute;
-  top: 25px;
-  right: 30px;
-} */
+  top: 40px;
+  right: 40px;
+}
 
 /* HEADER */
 
@@ -230,12 +230,11 @@ nav.sticky a {
   text-align: left;
   flex: 1;
   align-self: center;
-  text-align: left;
 }
 
 .site-name {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 1rem 0rem;
   text-transform: uppercase;
 }
 
@@ -355,4 +354,228 @@ span.button-portfolio-disable {
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+  nav {
+    padding: 40px 150px;
+  }
+
+  nav.sticky {
+    padding: 25px 100px;
+  }
+
+  #header h1 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+  #portfolio {
+    padding: 3.75rem 2rem;
+  }
+}
+
+@media (max-width: 950px) {
+  h1 {
+    font-family: "Raleway", sans-serif;
+    margin: 20px 0px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.25rem;
+    letter-spacing: 5px;
+  }
+
+  div {
+    overflow-x: hidden;
+  }
+
+  /* NAWIGACJA */
+
+  nav {
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 40px;
+    z-index: 10;
+    position: absolute;
+  }
+
+  nav.sticky {
+    position: absolute;
+    padding: 25px 25px;
+    background: #0f121b;
+  }
+
+  /* HEADER */
+
+  #header h1,
+  #header h3 {
+    font-family: "Quicksand", sans-serif;
+    color: #f9f8eb;
+    text-align: center;
+  }
+
+  #header h1 {
+    font-size: 14vw;
+    line-height: 13vw;
+  }
+  #header h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+
+  /* ABOUT ME */
+
+  #omnie {
+    background-color: #0f121b;
+    padding: 3.75rem 0rem;
+    color: #f9f8eb;
+  }
+
+  #omnie-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  #aboutme {
+    align-self: center;
+    flex: 1;
+  }
+
+  #aboutme ul li {
+    margin-left: 30px;
+  }
+
+  #photo {
+    flex: 1;
+    text-align: center;
+  }
+
+  #photo img {
+    width: 50%;
+    min-width: 30vh;
+    height: auto;
+    border-radius: 50%;
+    margin: 2rem 0rem;
+  }
+
+  /* ABOUT ME END */
+
+  /* PORTFOLIO */
+
+  #portfolio {
+    text-align: center;
+    padding: 3.75rem 1rem;
+  }
+
+  #portfolio-list {
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 6rem; */
+    padding: 3.75rem 0rem;
+    align-items: center;
+  }
+
+  #portfolio img {
+    max-width: 70vw;
+  }
+
+  .portfolio-foto {
+    flex: 1;
+    padding-bottom: 3rem;
+  }
+
+  .portfolio-about {
+    text-align: center;
+    flex: 1;
+    align-self: center;
+  }
+
+  .site-name {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  hr {
+    width: 100%;
+    margin: 1rem 0rem;
+    color: #0a112848;
+  }
+
+  .portfolio-buttons {
+    display: inline;
+  }
+
+  /* PORTFOLIO END */
+
+  #kontakt {
+    padding: 0rem 0rem 5rem 0rem;
+  }
+}
+
+@media (max-width: 750px) {
+  #burger {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #burger:hover {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+
+  #logo {
+    padding: 40px 0px 0px 40px;
+  }
+
+  .navbar-links {
+    display: none;
+    margin-top: 40px;
+    width: 100%;
+    height: 70vh;
+    background-color: #f9f8eb;
+    justify-content: center;
+    -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-links li {
+    padding: 1rem 0rem;
+  }
+
+  .navbar-links li a {
+    color: #1c202c;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .navbar-links li a:hover {
+    color: #1c202c;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
 }

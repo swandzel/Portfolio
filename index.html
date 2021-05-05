@@ -13,7 +13,7 @@
   <body>
     <nav>
       <div id="logo">swandzel.pl</div>
-      <!-- <a href="#"><i class="fas fa-bars fa-2x" id="burger"></i></a> -->
+      <a href="#"><i class="fas fa-bars fa-2x" id="burger"></i></a>
       <div class="navbar-links">
         <ul>
           <li><a href="#home">Home</a></li>
@@ -35,9 +35,9 @@
     </section>
     <main>
       <section id="omnie">
-        <h1 data-aos="fade-up flip-down">O MNIE</h1>
+        <h1>O MNIE</h1>
         <div id="omnie-content">
-          <div id="photo" data-aos="fade-right">
+          <div data-aos="zoom-out" id="photo">
             <img src="img/myphoto.jpg" alt="Sebastian Wandzel" />
           </div>
           <div id="aboutme" data-aos="fade-left">
@@ -55,13 +55,13 @@
           </div>
         </div>
       </section>
-      <section id="portfolio" data-aos="fade-up flip-down">
+      <section id="portfolio">
         <h1>PORTFOLIO</h1>
         <p>Kilka projektów nad którymi ostatnio pracowałem.</p>
         <!-- FIRST PORTFOLIO SITE -->
         <div id="portfolio-list">
-          <div class="portfolio-foto"><img src="img/wv.jpg" alt="Projekt #1" data-aos="fade-right" /></div>
-          <div class="portfolio-about" data-aos="fade-left">
+          <div data-aos="fade-right" class="portfolio-foto"><img src="img/wv.jpg" alt="Projekt #1" /></div>
+          <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">Wandzel Vineyards</p>
             <hr />
             <p>
@@ -81,8 +81,8 @@
         <!-- THIRD PORTFOLIO SITE -->
 
         <div id="portfolio-list">
-          <div class="portfolio-foto"><img src="img/pg.jpg" alt="Projekt #1" data-aos="fade-right" /></div>
-          <div class="portfolio-about" data-aos="fade-left">
+          <div data-aos="fade-right" class="portfolio-foto"><img src="img/pg.jpg" alt="Projekt #3" /></div>
+          <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">Random Pokémon Generator</p>
             <hr />
             <p>Aplikacja pobiera losowo wygenerowanego Pokemon’a z <a href="https://pokeapi.co/" target="_blank">PokeAPI</a> i wyświetla jego obrazek, nazwę, typ a także moce.</p>
@@ -95,10 +95,12 @@
           </div>
         </div>
       </section>
-      <section id="kontakt" data-aos="fade-up flip-down">
-        <h1>KONTAKT</h1>
-        <p>Pytania? Oferty pracy?</p>
-        <a href="mailto:s.wandzel@o2.pl" class="button-kontakt">Napisz do mnie!</a>
+      <section id="kontakt">
+        <div data-aos="zoom-in">
+          <h1>KONTAKT</h1>
+          <p>Pytania? Oferty pracy?</p>
+          <a href="mailto:s.wandzel@o2.pl" class="button-kontakt">Napisz do mnie!</a>
+        </div>
       </section>
     </main>
     <footer>
@@ -106,14 +108,14 @@
       <p class="footer-text">Header photo by <a href="https://unsplash.com/photos/q2GNdFmhxx4" target="_blank">Rich Tervet</a> Animate on scroll by <a href="https://github.com/michalsnik/aos" target="_blank">AOS</a></p>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
       AOS.init({
-        disable: "mobile",
         offset: 100,
         duration: 1000,
+        disable: "mobile",
       });
     </script>
-    <!-- <script src="noframework.waypoints.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="script.js"></script>
   </body>
