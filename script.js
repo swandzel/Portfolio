@@ -34,6 +34,8 @@ const textFade = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting && window.innerWidth > 1300) {
     header.classList.add("opacity");
+  } else if (window.innerWidth < 1300) {
+    header.classList.remove("opacity");
   } else header.classList.remove("opacity");
 };
 

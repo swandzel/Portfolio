@@ -202,6 +202,10 @@ nav.sticky a {
   text-underline-offset: 0.5rem;
 }
 
+.my-links {
+  margin-top: 2rem;
+}
+
 /* ABOUT ME END */
 
 /* PORTFOLIO */
@@ -373,6 +377,10 @@ span.button-portfolio-disable {
   #portfolio {
     padding: 3.75rem 2rem;
   }
+
+  .opacity {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 950px) {
@@ -466,6 +474,11 @@ span.button-portfolio-disable {
     margin: 2rem 0rem;
   }
 
+  .my-links {
+    margin-top: 2rem;
+    /* text-align: center; */
+  }
+
   /* ABOUT ME END */
 
   /* PORTFOLIO */
@@ -547,13 +560,14 @@ span.button-portfolio-disable {
     box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.4); */
     /* transform: rotateX(90deg); */
     transition: all 0.5s ease-in-out;
+    overflow: hidden;
   }
 
   .navbar-links.active {
     display: flex;
     /* transform: rotateX(0deg); */
     height: 70vh;
-
+    overflow: hidden;
     opacity: 1;
   }
 
@@ -565,6 +579,13 @@ span.button-portfolio-disable {
 
   .navbar-links li {
     padding: 1rem 0rem;
+    border-bottom: 1px solid #1c202c3a;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li:last-child {
+    border-bottom: 0px;
   }
 
   .navbar-links li a {
