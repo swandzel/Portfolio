@@ -360,13 +360,16 @@ span.button-portfolio-disable {
   font-weight: bold;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   nav {
     padding: 40px 150px;
+    position: absolute;
   }
 
   nav.sticky {
-    padding: 25px 100px;
+    padding: 40px 150px;
+    position: absolute;
+    background: #0f121b00;
   }
 
   #header h1 {
@@ -413,8 +416,8 @@ span.button-portfolio-disable {
 
   nav.sticky {
     position: absolute;
-    padding: 25px 25px;
-    background: #0f121b;
+    padding: 40px 40px;
+    background: #0f121b00;
   }
 
   /* HEADER */
