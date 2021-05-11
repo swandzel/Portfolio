@@ -4,11 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Sebastian Wandzel | Front-End Developer</title>
-    <meta name="description" content="" />
+    <meta name="description" content="Strona Portfolio Sebastiana Wandzela, Front-End Developera." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/cd181fabb3.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav>
@@ -17,19 +16,18 @@
       <div class="navbar-links">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#omnie">O Mnie</a></li>
+          <li><a href="#omnie">O&nbspMnie</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </div>
     </nav>
-
     <section id="home">
       <div id="layer">
         <div id="header">
           <h1>Sebastian Wandzel</h1>
           <h3>Front-End Developer</h3>
-          <a href="#portfolio" class="button-header">Pobierz moje CV</a>
+          <a href="CV_Sebastian_Wandzel.pdf" class="button-header" download>Pobierz moje CV</a>
         </div>
       </div>
     </section>
@@ -41,7 +39,8 @@
             <img src="img/myphoto.jpg" alt="Sebastian Wandzel" />
           </div>
           <div id="aboutme" data-aos="fade-left">
-            <p>Nazywam się <strong>Sebastian Wandzel</strong> i jestem Front-End Developerem. Mieszkam w Krakowie i w wolnych chwilach programuję.</p>
+            <p>Nazywam się <strong>Sebastian Wandzel</strong> i jestem Front-End Developerem.</p>
+            <p>Mieszkam w Krakowie i w wolnych chwilach programuję.</p>
             <br />
             <p>Technologie którymi obecnie się zajmuję:</p>
             <ul>
@@ -51,7 +50,7 @@
               <li>Bootstrap 5</li>
             </ul>
             <p class="my-links">
-              <a href="#">Moje CV</a> /
+              <a href="CV_Sebastian_Wandzel.pdf" download>Moje CV</a> /
               <a href="https://github.com/swandzel" target="_blank">Mój GitHub</a>
             </p>
           </div>
@@ -73,15 +72,27 @@
             <p>Do jej wykonania użyłem HTML, CSS i Bootstrap.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="#portfolio" class="button-portfolio">Wejdź</a>
+              <a href="Strony/WandzelVineyards/index.html" target="_blank" class="button-portfolio">Wejdź</a>
               <a href="https://github.com/swandzel/WandzelVineyards" target="_blank" class="button-portfolio">Sprawdź kod</a>
             </div>
           </div>
         </div>
         <!-- SECOND PORTFOLIO SITE -->
-
+        <div id="portfolio-list">
+          <div data-aos="fade-right" class="portfolio-foto"><img src="img/po.jpg" alt="Projekt #2" /></div>
+          <div data-aos="fade-left" class="portfolio-about">
+            <p class="site-name">Moje portfolio</p>
+            <hr />
+            <p>Moja strona na której prezentuje swoje dotychczasowe projekty.</p>
+            <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
+            <br /><br />
+            <div class="portfolio-buttons">
+              <span class="button-portfolio-disable">Wejdź</span>
+              <a href="https://github.com/swandzel/Portfolio" target="_blank" class="button-portfolio">Sprawdź kod</a>
+            </div>
+          </div>
+        </div>
         <!-- THIRD PORTFOLIO SITE -->
-
         <div id="portfolio-list">
           <div data-aos="fade-right" class="portfolio-foto"><img src="img/pg.jpg" alt="Projekt #3" /></div>
           <div data-aos="fade-left" class="portfolio-about">
@@ -91,16 +102,14 @@
             <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="#portfolio" class="button-portfolio">Wejdź</a>
+              <a href="Strony/Pokemon/index.html" target="_blank" class="button-portfolio">Wejdź</a>
               <a href="https://github.com/swandzel/PokemonApiGenerator" target="_blank" class="button-portfolio">Sprawdź kod</a>
             </div>
           </div>
         </div>
-
         <!-- FOURTH PORTFOLIO SITE -->
-
         <div id="portfolio-list">
-          <div data-aos="fade-right" class="portfolio-foto"><img src="img/tdl.jpg" alt="Projekt #3" /></div>
+          <div data-aos="fade-right" class="portfolio-foto"><img src="img/tdl.jpg" alt="Projekt #4" /></div>
           <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">ToDo List</p>
             <hr />
@@ -108,7 +117,7 @@
             <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="#portfolio" class="button-portfolio">Wejdź</a>
+              <a href="Strony/TodoList/index.html" target="_blank" class="button-portfolio">Wejdź</a>
               <a href="https://github.com/swandzel/todo-list" target="_blank" class="button-portfolio">Sprawdź kod</a>
             </div>
           </div>
@@ -127,7 +136,7 @@
       <p class="footer-text">Header photo by <a href="https://unsplash.com/photos/q2GNdFmhxx4" target="_blank">Rich Tervet</a> Animate on scroll by <a href="https://github.com/michalsnik/aos" target="_blank">AOS</a></p>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
+    <script src="https://kit.fontawesome.com/cd181fabb3.js" crossorigin="anonymous"></script>
     <script>
       AOS.init({
         offset: 100,

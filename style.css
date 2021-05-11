@@ -69,7 +69,6 @@ nav.sticky a {
   font-family: "Press Start 2P", cursive;
   color: #f9f8eb;
   font-size: 1rem;
-  transition: 0.6s;
 }
 
 .navbar-links ul {
@@ -109,7 +108,7 @@ nav.sticky a {
 
 #home {
   height: 100vh;
-  background: url(img/rich-tervet-q2GNdFmhxx4-unsplash.jpg);
+  background: url(img/header-photo.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -217,7 +216,6 @@ nav.sticky a {
 
 #portfolio-list {
   display: flex;
-  /* margin-bottom: 6rem; */
   padding: 3.75rem 0rem;
   align-items: center;
 }
@@ -362,14 +360,16 @@ span.button-portfolio-disable {
 
 @media (max-width: 1300px) {
   nav {
-    padding: 40px 150px;
+    padding: 40px 120px;
     position: absolute;
   }
 
   nav.sticky {
-    padding: 40px 150px;
+    padding: 40px 120px;
     position: absolute;
     background: #0f121b00;
+    -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
+    box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
   }
 
   #header h1 {
@@ -479,7 +479,6 @@ span.button-portfolio-disable {
 
   .my-links {
     margin-top: 2rem;
-    /* text-align: center; */
   }
 
   /* ABOUT ME END */
@@ -494,7 +493,6 @@ span.button-portfolio-disable {
   #portfolio-list {
     display: flex;
     flex-direction: column;
-    /* margin-bottom: 6rem; */
     padding: 3.75rem 0rem;
     align-items: center;
   }
@@ -538,6 +536,13 @@ span.button-portfolio-disable {
 }
 
 @media (max-width: 800px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0rem;
+  }
+
   #burger {
     display: flex;
     transition: all 0.5s ease-in-out;
@@ -559,16 +564,12 @@ span.button-portfolio-disable {
     height: 0vh;
     background-color: #f9f8eb;
     justify-content: center;
-    /* -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.4); */
-    /* transform: rotateX(90deg); */
     transition: all 0.5s ease-in-out;
     overflow: hidden;
   }
 
   .navbar-links.active {
     display: flex;
-    /* transform: rotateX(0deg); */
     height: 70vh;
     overflow: hidden;
     opacity: 1;
@@ -601,12 +602,5 @@ span.button-portfolio-disable {
   .navbar-links li a:hover {
     color: #1c202c;
     text-decoration: none;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0rem;
   }
 }
