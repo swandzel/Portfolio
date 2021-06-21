@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Sebastian Wandzel | Front-End Developer</title>
-    <meta name="description" content="Strona Portfolio Sebastiana Wandzela, Front-End Developera." />
+    <meta
+      name="description"
+      content="Strona Portfolio Sebastiana Wandzela, Front-End Developera."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
@@ -27,7 +30,13 @@
         <div id="header">
           <h1>Sebastian Wandzel</h1>
           <h3>Front-End Developer</h3>
-          <a href="CV_Sebastian_Wandzel.pdf" class="button-header" download target="_blank">Pobierz moje CV</a>
+          <a
+            href="CV_Sebastian_Wandzel.pdf"
+            class="button-header"
+            download
+            target="_blank"
+            >Pobierz moje CV</a
+          >
         </div>
       </div>
     </section>
@@ -39,19 +48,56 @@
             <img src="img/myphoto.jpg" alt="Sebastian Wandzel" />
           </div>
           <div id="aboutme" data-aos="fade-left">
-            <p>Nazywam się <strong>Sebastian Wandzel</strong> i jestem Front-End Developerem.</p>
+            <p>
+              Nazywam się <strong>Sebastian Wandzel</strong> i jestem Front-End
+              Developerem.
+            </p>
             <p>Mieszkam w Krakowie i w wolnych chwilach programuję.</p>
             <br />
             <p>Technologie którymi obecnie się zajmuję:</p>
-            <ul>
+            <div class="technologie">
+              <div class="technologie-row">
+                <div class="technologie-item">
+                  <i class="fab fa-react"></i>
+                  <p>React JS</p>
+                </div>
+                <div class="technologie-item">
+                  <i class="fab fa-js"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div class="technologie-item">
+                  <i class="fab fa-bootstrap"></i>
+                  <p>Bootstrap</p>
+                </div>
+              </div>
+
+              <div class="technologie-row">
+                <div class="technologie-item">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML5</p>
+                </div>
+                <div class="technologie-item">
+                  <i class="fab fa-css3-alt"></i>
+                  <p>CSS3</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <ul>
+              <li>React JS</li>
+              <li>JavaScript</li>
               <li>HTML5</li>
               <li>CSS3</li>
-              <li>JavaScript</li>
               <li>Bootstrap 5</li>
-            </ul>
+            </ul> -->
             <p class="my-links">
-              <a href="CV_Sebastian_Wandzel.pdf" download target="_blank">Moje CV</a> /
-              <a href="https://github.com/swandzel" target="_blank">Mój GitHub</a>
+              <a href="CV_Sebastian_Wandzel.pdf" download target="_blank"
+                >Moje CV</a
+              >
+              /
+              <a href="https://github.com/swandzel" target="_blank"
+                >Mój GitHub</a
+              >
             </p>
           </div>
         </div>
@@ -61,64 +107,121 @@
         <p>Kilka projektów nad którymi ostatnio pracowałem.</p>
         <!-- FIRST PORTFOLIO SITE -->
         <div id="portfolio-list">
-          <div data-aos="fade-right" class="portfolio-foto"><img src="img/wv.jpg" alt="Projekt #1" /></div>
+          <div data-aos="fade-right" class="portfolio-foto">
+            <img src="img/wv.jpg" alt="Projekt #1" />
+          </div>
           <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">Wandzel Vineyards</p>
             <hr />
             <p>
-              Projekt jest klonem strony Beringer Vineyards (<a href="https://www.beringer.com/" target="_blank">www.beringer.com</a>).<br />
-              Podczas tworzenia starałem się jak najwierniej odwzorować pierwowzór.
+              Projekt jest klonem strony Beringer Vineyards (<a
+                href="https://www.beringer.com/"
+                target="_blank"
+                >www.beringer.com</a
+              >).<br />
+              Podczas tworzenia starałem się jak najwierniej odwzorować
+              pierwowzór.
             </p>
             <p>Do jej wykonania użyłem HTML, CSS i Bootstrap.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="Strony/WandzelVineyards/index.html" target="_blank" class="button-portfolio">Wejdź</a>
-              <a href="https://github.com/swandzel/WandzelVineyards" target="_blank" class="button-portfolio">Sprawdź kod</a>
+              <a
+                href="Strony/WandzelVineyards/index.html"
+                target="_blank"
+                class="button-portfolio"
+                >Wejdź</a
+              >
+              <a
+                href="https://github.com/swandzel/WandzelVineyards"
+                target="_blank"
+                class="button-portfolio"
+                >Sprawdź kod</a
+              >
             </div>
           </div>
         </div>
         <!-- SECOND PORTFOLIO SITE -->
         <div id="portfolio-list">
-          <div data-aos="fade-right" class="portfolio-foto"><img src="img/po.jpg" alt="Projekt #2" /></div>
+          <div data-aos="fade-right" class="portfolio-foto">
+            <img src="img/po.jpg" alt="Projekt #2" />
+          </div>
           <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">Moje portfolio</p>
             <hr />
-            <p>Moja strona na której prezentuje swoje dotychczasowe projekty.</p>
+            <p>
+              Moja strona na której prezentuje swoje dotychczasowe projekty.
+            </p>
             <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
             <br /><br />
             <div class="portfolio-buttons">
               <span class="button-portfolio-disable">Wejdź</span>
-              <a href="https://github.com/swandzel/Portfolio" target="_blank" class="button-portfolio">Sprawdź kod</a>
+              <a
+                href="https://github.com/swandzel/Portfolio"
+                target="_blank"
+                class="button-portfolio"
+                >Sprawdź kod</a
+              >
             </div>
           </div>
         </div>
         <!-- THIRD PORTFOLIO SITE -->
         <div id="portfolio-list">
-          <div data-aos="fade-right" class="portfolio-foto"><img src="img/pg.jpg" alt="Projekt #3" /></div>
+          <div data-aos="fade-right" class="portfolio-foto">
+            <img src="img/pg.jpg" alt="Projekt #3" />
+          </div>
           <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">Random Pokémon Generator</p>
             <hr />
-            <p>Aplikacja pobiera losowo wygenerowanego Pokemon’a z <a href="https://pokeapi.co/" target="_blank">PokeAPI</a> i wyświetla jego obrazek, nazwę, typ a także moce.</p>
+            <p>
+              Aplikacja pobiera losowo wygenerowanego Pokemon’a z
+              <a href="https://pokeapi.co/" target="_blank">PokeAPI</a> i
+              wyświetla jego obrazek, nazwę, typ a także moce.
+            </p>
             <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="Strony/Pokemon/index.html" target="_blank" class="button-portfolio">Wejdź</a>
-              <a href="https://github.com/swandzel/PokemonApiGenerator" target="_blank" class="button-portfolio">Sprawdź kod</a>
+              <a
+                href="Strony/Pokemon/index.html"
+                target="_blank"
+                class="button-portfolio"
+                >Wejdź</a
+              >
+              <a
+                href="https://github.com/swandzel/PokemonApiGenerator"
+                target="_blank"
+                class="button-portfolio"
+                >Sprawdź kod</a
+              >
             </div>
           </div>
         </div>
         <!-- FOURTH PORTFOLIO SITE -->
         <div id="portfolio-list">
-          <div data-aos="fade-right" class="portfolio-foto"><img src="img/tdl.jpg" alt="Projekt #4" /></div>
+          <div data-aos="fade-right" class="portfolio-foto">
+            <img src="img/tdl.jpg" alt="Projekt #4" />
+          </div>
           <div data-aos="fade-left" class="portfolio-about">
             <p class="site-name">ToDo List</p>
             <hr />
-            <p>Prosta ToDo List'a do zapisywania zadań do zrobienia korzystająca z Local Storage.</p>
+            <p>
+              Prosta ToDo List'a do zapisywania zadań do zrobienia korzystająca
+              z Local Storage.
+            </p>
             <p>Do jej wykonania użyłem HTML, CSS i JavaScript.</p>
             <br /><br />
             <div class="portfolio-buttons">
-              <a href="Strony/TodoList/index.html" target="_blank" class="button-portfolio">Wejdź</a>
-              <a href="https://github.com/swandzel/todo-list" target="_blank" class="button-portfolio">Sprawdź kod</a>
+              <a
+                href="Strony/TodoList/index.html"
+                target="_blank"
+                class="button-portfolio"
+                >Wejdź</a
+              >
+              <a
+                href="https://github.com/swandzel/todo-list"
+                target="_blank"
+                class="button-portfolio"
+                >Sprawdź kod</a
+              >
             </div>
           </div>
         </div>
@@ -127,16 +230,28 @@
         <div data-aos="zoom-in">
           <h1>KONTAKT</h1>
           <p>Pytania? Oferty pracy?</p>
-          <a href="mailto:s.wandzel@o2.pl" class="button-kontakt">Napisz do mnie!</a>
+          <a href="mailto:s.wandzel@o2.pl" class="button-kontakt"
+            >Napisz do mnie!</a
+          >
         </div>
       </section>
     </main>
     <footer>
       <p>2021 | Sebastian Wandzel</p>
-      <p class="footer-text">Header photo by <a href="https://unsplash.com/photos/q2GNdFmhxx4" target="_blank">Rich Tervet</a> Animate on scroll by <a href="https://github.com/michalsnik/aos" target="_blank">AOS</a></p>
+      <p class="footer-text">
+        Header photo by
+        <a href="https://unsplash.com/photos/q2GNdFmhxx4" target="_blank"
+          >Rich Tervet</a
+        >
+        Animate on scroll by
+        <a href="https://github.com/michalsnik/aos" target="_blank">AOS</a>
+      </p>
     </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://kit.fontawesome.com/cd181fabb3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/cd181fabb3.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
       AOS.init({
         offset: 100,
