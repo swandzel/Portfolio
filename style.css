@@ -13,6 +13,7 @@ body {
   font-size: 1.25rem;
   background-color: #fff;
   color: #0f121b;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -69,6 +70,10 @@ nav.sticky a {
   font-family: "Press Start 2P", cursive;
   color: #f9f8eb;
   font-size: 1rem;
+}
+
+.burger {
+  display: none;
 }
 
 .navbar-links ul {
@@ -197,10 +202,6 @@ nav.sticky a {
 .technologie-item i {
   font-size: 3rem;
 }
-
-/* #aboutme ul li {
-  margin-left: 30px;
-} */
 
 #photo {
   flex: 1;
@@ -409,10 +410,10 @@ span.button-portfolio-disable {
   .opacity {
     opacity: 1;
   }
-}
 
-.burger {
-  display: none;
+  #aboutme {
+    padding-left: 2rem;
+  }
 }
 
 @media (max-width: 950px) {
@@ -487,6 +488,7 @@ span.button-portfolio-disable {
   #aboutme {
     align-self: center;
     flex: 1;
+    padding-left: 0rem;
   }
 
   #aboutme ul li {
@@ -582,21 +584,25 @@ span.button-portfolio-disable {
   }
 
   .navbar-links {
+    display: flex;
+    flex-direction: column;
     margin-top: 40px;
     width: 100%;
-    height: 0vh;
+    height: calc(100vh - 100px);
+    min-height: 400px;
     background-color: #f9f8eb;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    transform: translateX(-100%);
+    will-change: transform;
+    transition: all 0.4s ease;
   }
 
   .navbar-links.active {
-    display: flex;
-    min-width: 300px;
     height: calc(100vh - 100px);
     min-height: 400px;
     overflow: hidden;
-    opacity: 1;
+    transform: translateX(0%);
   }
 
   .navbar-links ul {
