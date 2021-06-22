@@ -42,9 +42,21 @@ const observer = new IntersectionObserver(textFade, {
 
 observer.observe(header);
 
-const burger = document.getElementById("burger");
+// BURGER / MOBILE MENU
+
+const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".navbar-links");
+const navLinksUl = document.querySelectorAll(".navbar-links-li");
 
 burger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+  burger.classList.toggle("active");
 });
+
+const closeMenu = () => {
+  navLinks.classList.remove("active");
+};
+
+for (let i = 0; i < navLinksUl.length; i++) {
+  navLinksUl[i].addEventListener("click", closeMenu);
+}

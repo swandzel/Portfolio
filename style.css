@@ -42,7 +42,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.6s;
+  transition: all 0.4s ease;
   padding: 40px 150px;
   z-index: 10;
   position: fixed;
@@ -54,7 +54,7 @@ nav.sticky {
   background: #0f121b;
   -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.54);
   box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.1);
-  transition: 0.6s;
+  transition: all 0.4s ease;
 }
 
 nav.sticky a {
@@ -85,7 +85,7 @@ nav.sticky a {
   text-decoration: none;
   font-weight: 400;
   font-size: 1.25rem;
-  transition: 1s all ease;
+  transition: all 0.4s ease;
 }
 
 .navbar-links a:hover {
@@ -108,11 +108,11 @@ nav.sticky a {
 
 #home {
   height: 100vh;
+  min-height: 500px;
   background: url(img/header-photo.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 #layer {
@@ -128,7 +128,7 @@ nav.sticky a {
 #header {
   align-self: center;
   text-align: center;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease;
 }
 
 #header h1,
@@ -176,8 +176,9 @@ nav.sticky a {
 
 .technologie {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 1rem;
+  justify-content: center;
   /* flex-wrap: wrap; */
 }
 
@@ -310,7 +311,7 @@ a.button-header {
   font-weight: 400;
   color: #f9f8eb;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.4s ease;
   margin-top: 40px;
   font-weight: 700;
 }
@@ -332,7 +333,7 @@ a.button-kontakt {
   font-weight: 400;
   color: #f9f8eb;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.4s ease;
   margin-top: 10px;
   font-weight: 700;
 }
@@ -353,7 +354,7 @@ a.button-portfolio {
   font-weight: 400;
   color: #0a1128;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.4s ease;
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -376,7 +377,7 @@ span.button-portfolio-disable {
   font-weight: 400;
   color: #060a1856;
   text-align: center;
-  transition: all 0.5s;
+  transition: all 0.4s ease;
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -410,6 +411,10 @@ span.button-portfolio-disable {
   }
 }
 
+.burger {
+  display: none;
+}
+
 @media (max-width: 950px) {
   h1 {
     font-family: "Raleway", sans-serif;
@@ -432,7 +437,7 @@ span.button-portfolio-disable {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.6s;
+    transition: all 0.4s ease;
     padding: 40px 40px;
     z-index: 10;
     position: absolute;
@@ -565,16 +570,11 @@ span.button-portfolio-disable {
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem;
+    transition: all 0.4s ease;
   }
 
-  #burger {
-    display: flex;
-    transition: all 0.5s ease-in-out;
-  }
-
-  #burger:hover {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
+  nav.sticky {
+    padding: 0;
   }
 
   #logo {
@@ -582,19 +582,19 @@ span.button-portfolio-disable {
   }
 
   .navbar-links {
-    display: flex;
     margin-top: 40px;
     width: 100%;
     height: 0vh;
     background-color: #f9f8eb;
     justify-content: center;
-    transition: all 0.5s ease-in-out;
     overflow: hidden;
   }
 
   .navbar-links.active {
     display: flex;
-    height: 70vh;
+    min-width: 300px;
+    height: calc(100vh - 100px);
+    min-height: 400px;
     overflow: hidden;
     opacity: 1;
   }
@@ -627,10 +627,36 @@ span.button-portfolio-disable {
     color: #1c202c;
     text-decoration: none;
   }
-}
 
-@media (max-width: 450px) {
-  .technologie-row {
+  .burger {
+    display: inline-block;
+    width: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+
+  .burger-line {
+    height: 3px;
+    margin-bottom: 3px;
+    background: #f9f8eb;
+    transition: all 0.4s ease;
+  }
+
+  .burger.active .burger-line:last-child {
+    opacity: 0;
+  }
+
+  .burger.active .burger-line:first-child {
+    transform: rotate(45deg) translate(4px, 4px);
+  }
+
+  .burger.active .burger-line:nth-child(2) {
+    transform: rotate(-45deg);
+  }
+
+  .technologie {
     flex-direction: column;
   }
 }

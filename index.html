@@ -15,14 +15,26 @@
   <body>
     <nav>
       <div id="logo">swandzel.pl</div>
-      <a href="#"><i class="fas fa-bars fa-2x" id="burger"></i></a>
       <div class="navbar-links">
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#omnie">O&nbspMnie</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#kontakt">Kontakt</a></li>
+          <li class="navbar-links-li">
+            <a href="#home">Home</a>
+          </li>
+          <li class="navbar-links-li">
+            <a href="#omnie">O&nbspMnie</a>
+          </li>
+          <li class="navbar-links-li">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li class="navbar-links-li">
+            <a href="#kontakt">Kontakt</a>
+          </li>
         </ul>
+      </div>
+      <div class="burger">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
       </div>
     </nav>
     <section id="home">
@@ -65,10 +77,6 @@
                   <i class="fab fa-js"></i>
                   <p>JavaScript</p>
                 </div>
-                <div class="technologie-item">
-                  <i class="fab fa-bootstrap"></i>
-                  <p>Bootstrap</p>
-                </div>
               </div>
 
               <div class="technologie-row">
@@ -80,16 +88,12 @@
                   <i class="fab fa-css3-alt"></i>
                   <p>CSS3</p>
                 </div>
+                <div class="technologie-item">
+                  <i class="fab fa-bootstrap"></i>
+                  <p>Bootstrap</p>
+                </div>
               </div>
             </div>
-
-            <!-- <ul>
-              <li>React JS</li>
-              <li>JavaScript</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Bootstrap 5</li>
-            </ul> -->
             <p class="my-links">
               <a href="CV_Sebastian_Wandzel.pdf" download target="_blank"
                 >Moje CV</a
@@ -105,7 +109,34 @@
       <section id="portfolio">
         <h1>PORTFOLIO</h1>
         <p>Kilka projektów nad którymi ostatnio pracowałem.</p>
-        <!-- FIRST PORTFOLIO SITE -->
+        <!-- PORTFOLIO SITE -->
+        <div id="portfolio-list">
+          <div data-aos="fade-right" class="portfolio-foto">
+            <img src="img/sc.jpg" alt="Projekt #1" />
+          </div>
+          <div data-aos="fade-left" class="portfolio-about">
+            <p class="site-name">Seb's Cafe</p>
+            <hr />
+            <p>Strona internetowa kawiarni.</p>
+            <p>Do jej wykonania użyłem React i CSS.</p>
+            <br /><br />
+            <div class="portfolio-buttons">
+              <a
+                href="https://sebscafe.netlify.app/"
+                target="_blank"
+                class="button-portfolio"
+                >Wejdź</a
+              >
+              <a
+                href="https://github.com/swandzel/sebs-cafe"
+                target="_blank"
+                class="button-portfolio"
+                >Sprawdź kod</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- PORTFOLIO SITE -->
         <div id="portfolio-list">
           <div data-aos="fade-right" class="portfolio-foto">
             <img src="img/wv.jpg" alt="Projekt #1" />
@@ -140,7 +171,7 @@
             </div>
           </div>
         </div>
-        <!-- SECOND PORTFOLIO SITE -->
+        <!-- PORTFOLIO SITE -->
         <div id="portfolio-list">
           <div data-aos="fade-right" class="portfolio-foto">
             <img src="img/po.jpg" alt="Projekt #2" />
@@ -164,7 +195,7 @@
             </div>
           </div>
         </div>
-        <!-- THIRD PORTFOLIO SITE -->
+        <!-- PORTFOLIO SITE -->
         <div id="portfolio-list">
           <div data-aos="fade-right" class="portfolio-foto">
             <img src="img/pg.jpg" alt="Projekt #3" />
