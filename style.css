@@ -593,8 +593,9 @@ span.button-portfolio-disable {
     background-color: #f9f8eb;
     justify-content: center;
     align-items: center;
-    transform: translateX(-100%);
-    will-change: transform;
+    position: absolute;
+    top: 60px;
+    left: -100%;
     transition: all 0.4s ease;
   }
 
@@ -602,7 +603,7 @@ span.button-portfolio-disable {
     height: calc(100vh - 100px);
     min-height: 400px;
     overflow: hidden;
-    transform: translateX(0%);
+    left: 0;
   }
 
   .navbar-links ul {
