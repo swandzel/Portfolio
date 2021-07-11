@@ -48,15 +48,13 @@ const burger = document.querySelector(".burger");
 const navLinks = document.querySelector(".navbar-links");
 const navLinksUl = document.querySelectorAll(".navbar-links-li");
 
-burger.addEventListener("click", () => {
+const toggleMenu = () => {
   navLinks.classList.toggle("active");
   burger.classList.toggle("active");
-});
-
-const closeMenu = () => {
-  navLinks.classList.remove("active");
 };
 
+burger.addEventListener("click", toggleMenu);
+
 for (let i = 0; i < navLinksUl.length; i++) {
-  navLinksUl[i].addEventListener("click", closeMenu);
+  navLinksUl[i].addEventListener("click", toggleMenu);
 }

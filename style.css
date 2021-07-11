@@ -248,6 +248,7 @@ nav.sticky a {
 
 #portfolio img {
   max-width: 40vw;
+  min-width: 300px;
 }
 
 .portfolio-foto {
@@ -267,7 +268,7 @@ nav.sticky a {
 }
 
 hr {
-  width: 30%;
+  width: 250px;
   margin: 1rem 0rem;
   color: #0a112848;
 }
@@ -538,6 +539,10 @@ span.button-portfolio-disable {
   }
 
   .portfolio-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     flex: 1;
     align-self: center;
@@ -550,7 +555,7 @@ span.button-portfolio-disable {
   }
 
   hr {
-    width: 100%;
+    width: 300px;
     margin: 1rem 0rem;
     color: #0a112848;
   }
