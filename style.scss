@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+$dark-color: #0f121b;
+$main-light: #fefcfb;
+$grey-color: #b2b9c5;
+
+@mixin transition {
+  transition: all 0.4s ease;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -10,8 +19,8 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  background-color: #fefcfb;
-  color: #0f121b;
+  background-color: $main-light;
+  color: $dark-color;
   overflow-x: hidden;
 }
 
@@ -25,12 +34,13 @@ h2 {
 }
 
 a {
-  color: #0f121b;
+  color: $dark-color;
   font-weight: bold;
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 nav {
@@ -39,28 +49,30 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.4s ease;
+  @include transition;
   padding: 40px 150px;
   z-index: 10;
   position: fixed;
-}
-nav.sticky {
-  padding: 25px 100px;
-  background: #0f121b;
-  -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.54);
-  box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.1);
-}
-nav.sticky a {
-  color: #fefcfb;
-  margin: 0px 20px;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1.25rem;
+
+  &.sticky {
+    padding: 25px 100px;
+    background: $dark-color;
+    -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0.1);
+
+    a {
+      color: $main-light;
+      margin: 0px 20px;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+  }
 }
 
 #logo {
   font-family: "Press Start 2P", cursive;
-  color: #fefcfb;
+  color: $main-light;
   font-size: 1rem;
 }
 
@@ -68,25 +80,28 @@ nav.sticky a {
   display: none;
 }
 
-.navbar-links ul {
-  position: relative;
-  display: flex;
-  list-style-type: none;
-  justify-content: flex-end;
-  text-transform: uppercase;
-}
-.navbar-links li a {
-  color: #fefcfb;
-  margin: 0px 20px;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 1.25rem;
-  transition: all 0.4s ease;
-}
-.navbar-links li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  color: #b2b9c5;
+.navbar-links {
+  ul {
+    position: relative;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    text-transform: uppercase;
+  }
+  li a {
+    color: $main-light;
+    margin: 0px 20px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.25rem;
+    @include transition;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 1rem;
+      color: $grey-color;
+    }
+  }
 }
 
 #home {
@@ -101,7 +116,7 @@ nav.sticky a {
 #layer {
   display: flex;
   justify-content: center;
-  background-color: rgba(15, 18, 27, 0.8);
+  background-color: rgba($dark-color, 0.8);
   top: 0;
   left: 0;
   width: 100%;
@@ -111,19 +126,21 @@ nav.sticky a {
 #header {
   align-self: center;
   text-align: center;
-  transition: all 0.4s ease;
-  color: #fefcfb;
+  @include transition;
+  color: $main-light;
   font-family: "Quicksand", sans-serif;
   text-align: center;
-}
-#header h1 {
-  font-size: 8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-#header h3 {
-  font-weight: 400;
-  font-size: 2.25rem;
+
+  h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 2.25rem;
+  }
 }
 
 .opacity {
@@ -131,38 +148,42 @@ nav.sticky a {
 }
 
 #omnie {
-  background-color: #0f121b;
+  background-color: $dark-color;
   padding: 3.75rem 0rem;
-  color: #fefcfb;
+  color: $main-light;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-#omnie-content {
-  display: flex;
-  align-items: center;
-}
-#omnie a {
-  text-decoration: none;
-  color: #fefcfb;
-  font-weight: 700;
-}
-#omnie a:hover {
-  color: #fefcfb;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
+
+  &-content {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-light;
+    font-weight: 700;
+
+    &:hover {
+      color: $main-light;
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+    }
+  }
 }
 
 #photo {
   flex: 1;
   overflow: hidden;
-}
-#photo img {
-  width: 50%;
-  min-width: 40vh;
-  border-radius: 50%;
+
+  img {
+    width: 50%;
+    min-width: 40vh;
+    border-radius: 50%;
+  }
 }
 
 #aboutme {
@@ -175,19 +196,22 @@ nav.sticky a {
   flex-direction: row;
   margin-top: 1rem;
   justify-content: center;
-}
-.technologie-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.technologie-item {
-  margin-top: 1rem;
-  text-align: center;
-  padding: 0rem 1rem;
-}
-.technologie-item i {
-  font-size: 3rem;
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &-item {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 0rem 1rem;
+  }
+
+  &-item i {
+    font-size: 3rem;
+  }
 }
 
 .my-links {
@@ -197,18 +221,21 @@ nav.sticky a {
 #portfolio {
   text-align: center;
   padding: 3.75rem 10rem;
-}
-#portfolio-list {
-  display: flex;
-  padding: 3.75rem 0rem;
-  align-items: center;
-}
-#portfolio img {
-  max-width: 40vw;
-  min-width: 300px;
-}
-#portfolio-foto {
-  flex: 1;
+
+  &-list {
+    display: flex;
+    padding: 3.75rem 0rem;
+    align-items: center;
+  }
+
+  img {
+    max-width: 40vw;
+    min-width: 300px;
+  }
+
+  &-foto {
+    flex: 1;
+  }
 }
 
 .portfolio-about {
@@ -230,7 +257,7 @@ nav.sticky a {
 hr {
   width: 250px;
   margin: 1rem 0rem;
-  color: rgba(15, 18, 27, 0.2);
+  color: rgba($dark-color, 0.2);
 }
 
 #kontakt {
@@ -239,24 +266,25 @@ hr {
 }
 
 footer {
-  background-color: #0f121b;
+  background-color: $dark-color;
   padding: 1.875rem 0rem;
   text-align: center;
-  color: #fefcfb;
+  color: $main-light;
 }
 
 .footer-text {
   font-size: 0.75rem;
-  color: #fefcfb;
+  color: $main-light;
   padding-top: 0.5rem;
-}
-.footer-text a {
-  color: #fefcfb;
+
+  a {
+    color: $main-light;
+  }
 }
 
-span.button-portfolio-disable, a.button-portfolio, a.button-kontakt, a.button-header {
+%button {
   display: inline-block;
-  transition: all 0.4s ease;
+  @include transition;
   font-weight: 400;
   box-sizing: border-box;
   text-decoration: none;
@@ -265,53 +293,60 @@ span.button-portfolio-disable, a.button-portfolio, a.button-kontakt, a.button-he
 }
 
 a.button-header {
+  @extend %button;
   font-size: 1.5rem;
   padding: 1.5rem 3em;
-  border: 0.1em solid #fefcfb;
-  color: #fefcfb;
+  border: 0.1em solid $main-light;
+  color: $main-light;
   margin-top: 40px;
   font-weight: 700;
-}
-a.button-header:hover {
-  color: #0f121b;
-  background-color: #fefcfb;
+
+  &:hover {
+    color: $dark-color;
+    background-color: $main-light;
+  }
 }
 
 a.button-kontakt {
-  background-color: #0f121b;
+  @extend %button;
+  background-color: $dark-color;
   font-size: 1.5rem;
   padding: 1.5rem 2em;
-  border: 0.1em solid #fefcfb;
-  color: #fefcfb;
+  border: 0.1em solid $main-light;
+  color: $main-light;
   margin-top: 10px;
   font-weight: 700;
-}
-a.button-kontakt:hover {
-  color: #fefcfb;
-  background-color: rgba(15, 18, 27, 0.85);
+
+  &:hover {
+    color: $main-light;
+    background-color: rgba($dark-color, 0.85);
+  }
 }
 
 a.button-portfolio {
+  @extend %button;
   font-size: 1rem;
   padding: 0.5rem;
   width: 12rem;
-  border: 0.1rem solid #0f121b;
-  color: #0f121b;
+  border: 0.1rem solid $dark-color;
+  color: $dark-color;
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
-}
-a.button-portfolio:hover {
-  color: #fefcfb;
-  background-color: #0f121b;
+
+  &:hover {
+    color: $main-light;
+    background-color: $dark-color;
+  }
 }
 
 span.button-portfolio-disable {
+  @extend %button;
   padding: 0.5rem 0em;
   width: 12rem;
-  border: 0.1rem solid rgba(15, 18, 27, 0.3);
+  border: 0.1rem solid rgba($dark-color, 0.3);
   font-weight: 400;
-  color: rgba(15, 18, 27, 0.3);
+  color: rgba($dark-color, 0.3);
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
@@ -321,13 +356,14 @@ span.button-portfolio-disable {
   nav {
     padding: 40px 120px;
     position: absolute;
-  }
-  nav.sticky {
-    padding: 40px 120px;
-    position: absolute;
-    background: #0f121b;
-    -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
-    box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
+
+    &.sticky {
+      padding: 40px 120px;
+      position: absolute;
+      background: $dark-color;
+      -webkit-box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
+      box-shadow: 0px 8px 16px 3px rgba(0, 0, 0, 0);
+    }
   }
 
   #header h1 {
@@ -347,6 +383,7 @@ span.button-portfolio-disable {
     padding-left: 2rem;
   }
 }
+
 @media (max-width: 950px) {
   div {
     overflow-x: hidden;
@@ -355,55 +392,62 @@ span.button-portfolio-disable {
   nav {
     padding: 40px 40px;
     position: absolute;
-  }
-  nav.sticky {
-    position: absolute;
-    padding: 40px 40px;
-    background: #0f121b;
+
+    &.sticky {
+      position: absolute;
+      padding: 40px 40px;
+      background: $dark-color;
+    }
   }
 
-  #header h1 {
-    font-size: 14vw;
-    line-height: 13vw;
-  }
-  #header h3 {
-    font-weight: 400;
-    font-size: 2rem;
+  #header {
+    h1 {
+      font-size: 14vw;
+      line-height: 13vw;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 2rem;
+    }
   }
 
   #omnie {
-    background-color: #0f121b;
+    background-color: $dark-color;
     padding: 3.75rem 0rem;
-    color: #fefcfb;
-  }
-  #omnie-content {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    color: $main-light;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+    }
   }
 
   #aboutme {
     align-self: center;
     flex: 1;
     padding-left: 0rem;
-  }
-  #aboutme ul li {
-    margin-left: 30px;
+
+    ul li {
+      margin-left: 30px;
+    }
   }
 
   #photo {
     flex: 1;
     text-align: center;
-  }
-  #photo img {
-    width: 50%;
-    min-width: 30vh;
-    height: auto;
-    border-radius: 50%;
-    margin: 2rem 0rem;
+
+    img {
+      width: 50%;
+      min-width: 30vh;
+      height: auto;
+      border-radius: 50%;
+      margin: 2rem 0rem;
+    }
   }
 
   .my-links {
@@ -413,19 +457,22 @@ span.button-portfolio-disable {
   #portfolio {
     text-align: center;
     padding: 3.75rem 1rem;
-  }
-  #portfolio-list {
-    display: flex;
-    flex-direction: column;
-    padding: 3.75rem 0rem;
-    align-items: center;
-  }
-  #portfolio-foto {
-    flex: 1;
-    padding-bottom: 3rem;
-  }
-  #portfolio img {
-    max-width: 70vw;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding: 3.75rem 0rem;
+      align-items: center;
+    }
+
+    &-foto {
+      flex: 1;
+      padding-bottom: 3rem;
+    }
+
+    img {
+      max-width: 70vw;
+    }
   }
 
   .portfolio-about {
@@ -447,7 +494,7 @@ span.button-portfolio-disable {
   hr {
     width: 300px;
     margin: 1rem 0rem;
-    color: rgba(15, 18, 27, 0.2);
+    color: rgba($dark-color, 0.2);
   }
 
   .portfolio-buttons {
@@ -458,16 +505,18 @@ span.button-portfolio-disable {
     padding: 0rem 0rem 5rem 0rem;
   }
 }
+
 @media (max-width: 800px) {
   nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0rem;
-    transition: all 0.4s ease;
-  }
-  nav.sticky {
-    padding: 0;
+    @include transition;
+
+    &.sticky {
+      padding: 0;
+    }
   }
 
   #logo {
@@ -481,33 +530,37 @@ span.button-portfolio-disable {
     width: 100%;
     height: calc(100vh - 100px);
     min-height: 400px;
-    background-color: #fefcfb;
+    background-color: $main-light;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 60px;
     left: -100%;
-    transition: all 0.4s ease;
-  }
-  .navbar-links.active {
-    height: calc(100vh - 100px);
-    min-height: 400px;
-    overflow: hidden;
-    left: 0;
-  }
-  .navbar-links ul {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbar-links li {
-    padding: 1rem 0rem;
-    border-bottom: 1px solid rgba(15, 18, 27, 0.2);
-    width: 100%;
-    text-align: center;
-  }
-  .navbar-links li:last-child {
-    border-bottom: 0px;
+    @include transition;
+
+    &.active {
+      height: calc(100vh - 100px);
+      min-height: 400px;
+      overflow: hidden;
+      left: 0;
+    }
+
+    ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    li {
+      padding: 1rem 0rem;
+      border-bottom: 1px solid rgba($dark-color, 0.2);
+      width: 100%;
+      text-align: center;
+
+      &:last-child {
+        border-bottom: 0px;
+      }
+    }
   }
 
   .navbar-links li a {
@@ -515,14 +568,17 @@ span.button-portfolio-disable {
     font-weight: bold;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
-  }
-  .navbar-links li a:hover {
-    color: #1c202c;
-    text-decoration: none;
+
+    &:hover {
+      color: #1c202c;
+      text-decoration: none;
+    }
   }
 
-  #header h3 {
-    font-size: 1.5rem;
+  #header {
+    h3 {
+      font-size: 1.5rem;
+    }
   }
 
   h2 {
@@ -546,22 +602,23 @@ span.button-portfolio-disable {
     height: 3px;
     margin-bottom: 3px;
     background: #f9f8eb;
-    transition: all 0.4s ease;
+    @include transition;
   }
 
-  .burger.active .burger-line:last-child {
-    opacity: 0;
-  }
-  .burger.active .burger-line:first-child {
-    transform: rotate(45deg) translate(4px, 4px);
-  }
-  .burger.active .burger-line:nth-child(2) {
-    transform: rotate(-45deg);
+  .burger.active .burger-line {
+    &:last-child {
+      opacity: 0;
+    }
+    &:first-child {
+      transform: rotate(45deg) translate(4px, 4px);
+    }
+    &:nth-child(2) {
+      transform: rotate(-45deg);
+    }
   }
 }
+
 a.button-header {
   font-size: 1.25rem;
   padding: 1.25rem 2.5em;
 }
-
-/*# sourceMappingURL=style.css.map */
