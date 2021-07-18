@@ -212,25 +212,32 @@ nav.sticky a {
 }
 
 .portfolio-about {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
-  align-self: center;
+}
+.portfolio-about hr {
+  width: 250px;
+  margin: 1rem 0rem;
+  color: rgba(15, 18, 27, 0.2);
+}
+.portfolio-about:nth-child(odd) {
+  flex: 1;
+}
+.portfolio-about:nth-child(odd) hr {
+  text-align: right;
+  width: 250px;
+  margin: 1rem 0rem;
+}
+.portfolio-about .site-name {
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .portfolio-buttons {
   display: inline;
-}
-
-.site-name {
-  font-weight: 700;
-  margin: 1rem 0rem;
-  text-transform: uppercase;
-}
-
-hr {
-  width: 250px;
-  margin: 1rem 0rem;
-  color: rgba(15, 18, 27, 0.2);
+  margin-top: 1rem;
 }
 
 #kontakt {
@@ -390,9 +397,6 @@ span.button-portfolio-disable {
     flex: 1;
     padding-left: 0rem;
   }
-  #aboutme ul li {
-    margin-left: 30px;
-  }
 
   #photo {
     flex: 1;
@@ -437,17 +441,19 @@ span.button-portfolio-disable {
     flex: 1;
     align-self: center;
   }
-
-  .site-name {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-  }
-
-  hr {
+  .portfolio-about hr {
     width: 300px;
     margin: 1rem 0rem;
     color: rgba(15, 18, 27, 0.2);
+  }
+  .portfolio-about:nth-child(odd) {
+    order: 2;
+  }
+
+  .site-name {
+    font-weight: 700;
+    margin: 1rem 0rem;
+    text-transform: uppercase;
   }
 
   .portfolio-buttons {
@@ -521,6 +527,15 @@ span.button-portfolio-disable {
     text-decoration: none;
   }
 
+  #home {
+    height: 100vh;
+    min-height: 500px;
+    background: url(img/header-photo-mini.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   #header h3 {
     font-size: 1.5rem;
   }
@@ -562,6 +577,12 @@ span.button-portfolio-disable {
 a.button-header {
   font-size: 1.25rem;
   padding: 1.25rem 2.5em;
+}
+
+@media (max-width: 800px) {
+  #omnie-content {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
