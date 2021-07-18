@@ -584,5 +584,14 @@ a.button-header {
     width: 90%;
   }
 }
+@media (max-width: 400px) {
+  .portfolio-list {
+    display: flex;
+    justify-content: center;
+  }
+  .portfolio-list .portfolio-foto {
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
