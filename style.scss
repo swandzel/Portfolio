@@ -226,15 +226,19 @@ nav {
     display: flex;
     padding: 3.75rem 0rem;
     align-items: center;
+    justify-content: center;
+  }
+
+  &-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
   }
 
   img {
     max-width: 40vw;
     min-width: 300px;
-  }
-
-  &-foto {
-    flex: 1;
   }
 }
 
@@ -479,7 +483,9 @@ span.button-portfolio-disable {
     }
 
     img {
+      text-align: center;
       max-width: 70vw;
+      margin-right: 15px;
     }
   }
 
