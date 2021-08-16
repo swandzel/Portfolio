@@ -181,7 +181,7 @@ nav {
 
   img {
     width: 50%;
-    min-width: 40vh;
+    min-width: 50vh;
     border-radius: 50%;
   }
 }
@@ -386,10 +386,36 @@ span.button-portfolio-disable {
   #aboutme {
     padding-left: 2rem;
   }
+
+  #photo {
+    flex: 1;
+    text-align: center;
+
+    img {
+      width: 50%;
+      min-width: 50vh;
+      height: auto;
+      border-radius: 50%;
+      margin: 2rem 0rem;
+    }
+  }
+  #portfolio {
+    padding: 3.75rem 6rem;
+  }
 }
 
-#portfolio {
-  padding: 3.75rem 6rem;
+@media (max-width: 1200px) {
+  #omnie {
+    padding: 3.75rem 1rem;
+  }
+
+  .technologie {
+    flex-direction: column;
+  }
+
+  #aboutme {
+    padding-left: 0px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -428,7 +454,7 @@ span.button-portfolio-disable {
     &-content {
       display: flex;
       flex-direction: column;
-      width: 80%;
+      // width: 80%;
       margin-left: auto;
       margin-right: auto;
       align-items: center;
@@ -456,6 +482,10 @@ span.button-portfolio-disable {
 
   .my-links {
     margin-top: 2rem;
+  }
+
+  .technologie {
+    flex-direction: row;
   }
 
   #portfolio {
@@ -571,8 +601,9 @@ span.button-portfolio-disable {
   }
 
   #omnie {
+    padding: 3.75rem 0.3rem;
     &-content {
-      width: 90%;
+      width: 100%;
     }
   }
 
@@ -626,8 +657,27 @@ a.button-header {
   padding: 1.25rem 2.5em;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   #portfolio {
-    padding: 3.75rem 1rem;
+    padding: 3.75rem 0rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #photo {
+    img {
+      width: 50%;
+      min-width: 30vh;
+    }
+  }
+
+  .technologie {
+    &-row {
+      justify-content: space-evenly;
+    }
+
+    &-item {
+      padding: 0rem 0.5rem;
+    }
   }
 }
